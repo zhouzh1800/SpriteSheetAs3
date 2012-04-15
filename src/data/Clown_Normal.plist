@@ -7,11 +7,11 @@
             <key>Clown_Normal00.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{87,51},{23,47}}</string>
+                <string>{{0,154},{23,47}}</string>
                 <key>offset</key>
                 <string>{0,1}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{6,0},{23,47}}</string>
                 <key>sourceSize</key>
@@ -20,11 +20,11 @@
             <key>Clown_Normal01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{33,2},{27,49}}</string>
+                <string>{{0,56},{27,49}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,0},{27,49}}</string>
                 <key>sourceSize</key>
@@ -33,11 +33,11 @@
             <key>Clown_Normal02.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{31,53},{27,49}}</string>
+                <string>{{49,54},{27,49}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,0},{27,49}}</string>
                 <key>sourceSize</key>
@@ -46,11 +46,11 @@
             <key>Clown_Normal03.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{29,49}}</string>
+                <string>{{0,0},{29,49}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{3,0},{29,49}}</string>
                 <key>sourceSize</key>
@@ -59,7 +59,7 @@
             <key>Clown_Normal04.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{33,206},{29,47}}</string>
+                <string>{{98,47},{29,47}}</string>
                 <key>offset</key>
                 <string>{-1,1}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>Clown_Normal05.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{85,104},{27,47}}</string>
+                <string>{{0,188},{27,47}}</string>
                 <key>offset</key>
                 <string>{0,1}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>Clown_Normal06.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{81,155},{27,47}}</string>
+                <string>{{98,141},{27,47}}</string>
                 <key>offset</key>
                 <string>{0,1}</string>
                 <key>rotated</key>
@@ -98,11 +98,11 @@
             <key>Clown_Normal07.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,155},{27,49}}</string>
+                <string>{{0,29},{27,49}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{3,0},{27,49}}</string>
                 <key>sourceSize</key>
@@ -111,11 +111,11 @@
             <key>Clown_Normal08.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{60,53},{25,49}}</string>
+                <string>{{0,108},{25,49}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,0},{25,49}}</string>
                 <key>sourceSize</key>
@@ -124,11 +124,11 @@
             <key>Clown_Normal09.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{58,104},{25,49}}</string>
+                <string>{{49,106},{25,49}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{4,0},{25,49}}</string>
                 <key>sourceSize</key>
@@ -137,11 +137,11 @@
             <key>Clown_Normal10.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{58,155},{21,49}}</string>
+                <string>{{0,133},{21,49}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{7,0},{21,49}}</string>
                 <key>sourceSize</key>
@@ -150,11 +150,11 @@
             <key>Clown_Normal11.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{112,43},{21,39}}</string>
+                <string>{{39,235},{21,39}}</string>
                 <key>offset</key>
                 <string>{0,5}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{7,0},{21,39}}</string>
                 <key>sourceSize</key>
@@ -163,7 +163,7 @@
             <key>Clown_Normal12.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{87,2},{23,47}}</string>
+                <string>{{100,188},{23,47}}</string>
                 <key>offset</key>
                 <string>{0,1}</string>
                 <key>rotated</key>
@@ -176,7 +176,7 @@
             <key>Clown_Normal13.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,153},{25,47}}</string>
+                <string>{{52,188},{25,47}}</string>
                 <key>offset</key>
                 <string>{1,1}</string>
                 <key>rotated</key>
@@ -189,11 +189,11 @@
             <key>Clown_Normal14.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,104},{27,49}}</string>
+                <string>{{49,27},{27,49}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{5,0},{27,49}}</string>
                 <key>sourceSize</key>
@@ -202,7 +202,7 @@
             <key>Clown_Normal15.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,206},{29,47}}</string>
+                <string>{{98,0},{29,47}}</string>
                 <key>offset</key>
                 <string>{0,1}</string>
                 <key>rotated</key>
@@ -215,7 +215,7 @@
             <key>Clown_Normal16.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{64,206},{27,47}}</string>
+                <string>{{98,94},{27,47}}</string>
                 <key>offset</key>
                 <string>{1,1}</string>
                 <key>rotated</key>
@@ -228,11 +228,11 @@
             <key>Clown_Normal17.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,53},{27,49}}</string>
+                <string>{{49,0},{27,49}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{5,0},{27,49}}</string>
                 <key>sourceSize</key>
@@ -241,7 +241,7 @@
             <key>Clown_Normal18.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{93,204},{25,47}}</string>
+                <string>{{27,188},{25,47}}</string>
                 <key>offset</key>
                 <string>{1,1}</string>
                 <key>rotated</key>
@@ -254,11 +254,11 @@
             <key>Clown_Normal19.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{31,155},{25,49}}</string>
+                <string>{{0,83},{25,49}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{6,0},{25,49}}</string>
                 <key>sourceSize</key>
@@ -267,11 +267,11 @@
             <key>Clown_Normal20.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{31,104},{25,49}}</string>
+                <string>{{49,81},{25,49}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{6,0},{25,49}}</string>
                 <key>sourceSize</key>
@@ -280,11 +280,11 @@
             <key>Clown_Normal21.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{62,2},{23,49}}</string>
+                <string>{{49,131},{23,49}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{7,0},{23,49}}</string>
                 <key>sourceSize</key>
@@ -293,7 +293,7 @@
             <key>Clown_Normal22.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{120,202},{23,47}}</string>
+                <string>{{77,188},{23,47}}</string>
                 <key>offset</key>
                 <string>{0,1}</string>
                 <key>rotated</key>
@@ -306,11 +306,11 @@
             <key>Clown_Normal23.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{112,2},{21,39}}</string>
+                <string>{{0,235},{21,39}}</string>
                 <key>offset</key>
                 <string>{0,5}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{7,0},{21,39}}</string>
                 <key>sourceSize</key>
@@ -324,9 +324,9 @@
             <key>realTextureFileName</key>
             <string>Clown_Normal.png</string>
             <key>size</key>
-            <string>{256,256}</string>
+            <string>{127,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:90f8d94033a3c5eea7664b8208146741$</string>
+            <string>$TexturePacker:SmartUpdate:dfa184a65c41de7a9a710d79b3a8c6eb$</string>
             <key>textureFileName</key>
             <string>Clown_Normal.png</string>
         </dict>

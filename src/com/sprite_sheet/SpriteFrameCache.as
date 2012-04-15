@@ -1,11 +1,11 @@
 package com.sprite_sheet
 {
+	import flash.display.Bitmap;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import flash.utils.Dictionary;
-	import flash.display.Bitmap;
-	import utils.loading.BigLoader;
 	
+	import utils.loading.BigLoader;
 	import utils.plist.PDict;
 	import utils.plist.Plist10;
 	
@@ -55,7 +55,7 @@ package com.sprite_sheet
 				var frame: FrameInfo = new FrameInfo();
 				frame.mFrame = ConvertStringToRect(frameDict.object["frame"]);
 				frame.mOffset = ConvertStringToPoint(frameDict.object["offset"]);
-				frame.mRotated = frameDict.object["rotated"];
+				frame.mRotated = frameDict.object["rotated"].object;
 				frame.mSourceColorRect = ConvertStringToRect(frameDict.object["sourceColorRect"]);
 				frame.mSourceSize = ConvertStringToPoint(frameDict.object["sourceSize"]);
 				frame.mMetadataInfo = metadataInfo;
@@ -108,10 +108,30 @@ package com.sprite_sheet
 				return null;
 			}
 			
-			var bmp: Bitmap = spriteSheet.getBitmapByRect(frameInfo.mFrame);
+			var rx: int = frameInfo.mFrame.left;
+			var ry: int = frameInfo.mFrame.top;
+			var rw: int = frameInfo.mFrame.width;
+			var rh: int = frameInfo.mFrame.height;
+			
+			if(frameInfo.mRotated)
+			{
+				var temp: int = rh;
+				rh = rw;
+				rw = temp;
+			}
+			
+			var rect: Rectangle = new Rectangle(rx, ry, rw, rh);
+			
+			var bmp: Bitmap = spriteSheet.getBitmapByRect(rect);
 			
 			bmp.x = frameInfo.mSourceColorRect.left;
 			bmp.y = frameInfo.mSourceColorRect.top;
+			
+			if(frameInfo.mRotated)
+			{
+				bmp.rotation = -90;
+				bmp.y += frameInfo.mFrame.height;
+			}
 			
 			var ssbmp: SpriteSheetFrame = new SpriteSheetFrame(bmp, frameInfo.mSourceSize.x, frameInfo.mSourceSize.y);
 			
