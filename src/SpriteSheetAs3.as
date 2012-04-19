@@ -107,7 +107,7 @@ package
 				bmps.push(bmp);
 			}
 			
-			for(i = 10; i < 23; i++)
+			for(i = 10; i < 24; i++)
 			{
 				bmp = SpriteFrameCache.Singleton().CreateSpriteSheetFrame("Clown_Normal" + i + ".png");
 				bmps.push(bmp);

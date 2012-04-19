@@ -2,8 +2,9 @@ package com.sprite_sheet
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
-	import flash.utils.getTimer;
 	import flash.geom.Matrix;
+	import flash.geom.Point;
+	import flash.utils.getTimer;
 	
 	public class Animation extends Sprite
 	{
@@ -24,6 +25,8 @@ package com.sprite_sheet
 		
 		protected var mIsEnable: Boolean;
 		
+		protected var mAnchor: Point = new Point();
+		
 		public function Animation(): void
 		{
 			EnableUpdate(true);
@@ -39,9 +42,7 @@ package com.sprite_sheet
 		
 		public function Init(): void 
 		{
-			var myMatrix:Matrix = new Matrix();
-			myMatrix.translate(-mWidth / 2, -mHeight / 2);
-			transform.matrix = myMatrix;
+			SetAnchor(0.5, 0.5);
 			DoInit();
 		}
 		
@@ -60,17 +61,23 @@ package com.sprite_sheet
 			return mIsPlay;
 		}
 		
+		public function GetAnchor(): Point
+		{
+			return mAnchor;
+		}
+		
+		public function SetAnchor(ax: Number, ay: Number): void
+		{
+			mAnchor.x = ax;
+			mAnchor.y = ay;
+			
+			var myMatrix:Matrix = new Matrix();
+			myMatrix.translate(-mWidth * mAnchor.x, -mHeight * mAnchor.y);
+			transform.matrix = myMatrix;
+		}
+		
 		public function EnableUpdate(isEnable:Boolean): void
 		{
-			//			if(isEnable)
-			//			{
-			//				stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
-			//			}
-			//			else
-			//			{
-			//				stage.removeEventListener(Event.ENTER_FRAME, enterFrameHandler);
-			//			}
-			
 			if(isEnable)
 			{
 				addEventListener(Event.ENTER_FRAME, enterFrameHandler);
