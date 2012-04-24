@@ -18,7 +18,7 @@
 		
 		override public function EnableShow(isEnable:Boolean): void
 		{
-			for each(var i in mBmps)
+			for each(var i: Bitmap in mBmps)
 			{
 				i.visible = isEnable;
 			}
@@ -26,7 +26,7 @@
 		
 		override public function IsShow(): Boolean
 		{
-			for each(var i in mBmps)
+			for each(var i: Bitmap in mBmps)
 			{
 				return i.visible;
 			}
@@ -34,15 +34,10 @@
 			return false;
 		}
 		
-		override public function RealEnterFrameHandler(e:Event, elapseTime:int): void
+		override public function RealEnterFrameHandler(e:Event, newFrameIndex: int): void
 		{
 			if(mIsPlay)
 			{
-				var speed: Number = 1000 / mFps;
-				mSumTime += elapseTime;
-				var newFrameIndex:int = mSumTime / speed + 0.5;
-				newFrameIndex %= mBmps.length;
-			
 				if(newFrameIndex != mFrameIndex)
 				{
 					SetFrame(newFrameIndex);

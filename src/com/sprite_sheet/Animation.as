@@ -32,12 +32,38 @@ package com.sprite_sheet
 			EnableUpdate(true);
 		}
 		
-		private function enterFrameHandler(e:Event):void{
+		private function enterFrameHandler(e:Event):void
+		{
 			var nowTime:int = getTimer();
 			var elapseTime:int = nowTime - mPreTime;
 			mPreTime = nowTime;
+			if(mIsPlay)
+			{
+				var speed: Number = 1000 / mFps;
+				mSumTime += elapseTime;
+				var newFrameIndex:int = mSumTime / speed + 0.5;
+				
+				newFrameIndex = calRealFrameIndex(newFrameIndex);
+				
+				RealEnterFrameHandler(e, newFrameIndex);
+			}
+		}
+		
+		public function calRealFrameIndex(newFrameIndex: int): int
+		{
+			if(mLoopMode == 0)
+			{
+				if(newFrameIndex >= mFrameCount)
+				{
+					newFrameIndex = mFrameCount - 1;
+				}
+			}
+			else if(mLoopMode == 1)
+			{
+				newFrameIndex %= mFrameCount;
+			}
 			
-			RealEnterFrameHandler(e, elapseTime);
+			return newFrameIndex;
 		}
 		
 		public function Init(): void 
@@ -54,6 +80,12 @@ package com.sprite_sheet
 		public function EnablePlay(isEnable:Boolean): void
 		{
 			mIsPlay = isEnable;
+		}
+		
+		public function Replay(): void
+		{
+			this.mSumTime = 0;
+			SetFrame(0);
 		}
 		
 		public function IsPlay(): Boolean
@@ -96,7 +128,7 @@ package com.sprite_sheet
 		public function EnableShow(isEnable:Boolean): void{}
 		public function IsShow(): Boolean{ return false; }
 		
-		public function RealEnterFrameHandler(e:Event, elapseTime:int): void{}
+		public function RealEnterFrameHandler(e: Event, newFrameIndex: int): void{}
 		public function SetFrame(frameIndex:int): void{}
 	}
 	

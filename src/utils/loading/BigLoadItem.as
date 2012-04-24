@@ -38,7 +38,7 @@ package utils.loading
     import flash.system.LoaderContext;
     import flash.system.Security;
     import flash.system.SecurityDomain;
-
+	import flash.media.Sound;
    
 
 	/**
@@ -60,7 +60,8 @@ package utils.loading
 
         public static const DATA    :String = "bssData";
         public static const MEDIA   :String = "bssMedia";
-
+		public static const SOUND   :String = "bssSound";
+		
         public static const IDLE    :String = "idle";
         public static const LOADING :String = "loading";
         public static const LOADED  :String = "loaded";
@@ -98,6 +99,9 @@ package utils.loading
                     case "txt":
                         _type = DATA;
                     break;
+					case "mp3":
+						_type = SOUND;
+						break;
                     default:                // for all images and swfs
                         _type = MEDIA;
                     break;
@@ -143,13 +147,20 @@ package utils.loading
                 _loader.removeEventListener(IOErrorEvent.IO_ERROR,  _onFail);
                 _loader.removeEventListener(ProgressEvent.PROGRESS, _onProgress);
                 _loader.removeEventListener(Event.COMPLETE,         _onComplete);
-            } else
+            }
+			else if(_type == BigLoadItem.MEDIA)
             {
                 _loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR,    _onFail);
                 _loader.contentLoaderInfo.removeEventListener(ProgressEvent.PROGRESS,   _onProgress);
                 _loader.contentLoaderInfo.removeEventListener(Event.COMPLETE,           _onComplete);
             }
-
+			else if(_type == BigLoadItem.SOUND)
+			{
+				_loader.removeEventListener(IOErrorEvent.IO_ERROR,  _onFail);
+				_loader.removeEventListener(ProgressEvent.PROGRESS, _onProgress);
+				_loader.removeEventListener(Event.COMPLETE,         _onComplete);
+			}
+			
             _loader = null;
         };
 
@@ -166,7 +177,13 @@ package utils.loading
                 _loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,   _onFail,     false, 0, true);
                 _loader.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS,  _onProgress, false, 0, true);
                 _loader.contentLoaderInfo.addEventListener(Event.COMPLETE,          _onComplete, false, 0, true);
-            } else {
+            }else if(_type == BigLoadItem.SOUND) {
+				_loader = new Sound();
+				_loader.addEventListener(IOErrorEvent.IO_ERROR,     _onFail,     false, 0, true);
+				_loader.addEventListener(ProgressEvent.PROGRESS,    _onProgress, false, 0, true);
+				_loader.addEventListener(Event.COMPLETE,            _onComplete, false, 0, true);
+			}
+			else {
                 trace("_setupLoader: Loading unknown type.");
             }
         };
@@ -209,7 +226,8 @@ package utils.loading
 		};
         public function get content():* {
             if(_type == BigLoadItem.DATA) return _loader.data;
-            return _loader.content;
+			if(_type == BigLoadItem.MEDIA)return _loader.content;
+			if(_type == BigLoadItem.SOUND) return _loader;
         };
         public function getWeightedPercentage($totalWeight:Number):Number {
             return ((_weight / $totalWeight) * _pctLoaded);

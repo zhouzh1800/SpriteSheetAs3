@@ -34,15 +34,10 @@ package com.sprite_sheet
 			return false;
 		}
 		
-		override public function RealEnterFrameHandler(e:Event, elapseTime:int): void
+		override public function RealEnterFrameHandler(e:Event, newFrameIndex: int): void
 		{
 			if(mIsPlay)
 			{
-				var speed: Number = 1000 / mFps;
-				mSumTime += elapseTime;
-				var newFrameIndex:int = mSumTime / speed + 0.5;
-				newFrameIndex %= mBmps.length;
-				
 				if(newFrameIndex != mFrameIndex)
 				{
 					SetFrame(newFrameIndex);

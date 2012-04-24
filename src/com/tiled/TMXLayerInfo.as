@@ -36,6 +36,11 @@ package com.tiled
 					var encoder: GZIPBytesEncoder = new GZIPBytesEncoder();
 					mData = encoder.uncompressToByteArray(mData);
 				}
+				else
+				{
+					trace("tiled map compression error: " + mDataCompression);
+					return;
+				}
 			}
 			else
 			{
